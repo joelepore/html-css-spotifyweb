@@ -8,11 +8,13 @@
   /* SIZES */
   --h-player: 90px;
   --w-sidebar-extended: 200px;
+  --w-sidebar-collapsed: 45px;
 }
 
 /* debug */
 .debug {
   border: 1px solid yellow;
+  min-height: 40px;
 }
 
 * {
@@ -23,6 +25,7 @@
 
 body {
   font-family: 'CircularStd';
+  font-weight: 100;
 }
 
 .container {
@@ -67,4 +70,31 @@ main {
 .sidebar {
   background-color: var(--color-bg-sidebar);
   height: 100%;
+}
+
+.sidebar .logo {
+  height: 70px;
+}
+
+.sidebar nav {
+  height: 120px;
+}
+
+.sidebar .user {
+  height: 90px;
+}
+
+.sidebar .playlists {
+  height: calc(100% - (70px + 120px + 90px));
+  overflow: auto;
+}
+
+@media screen and (max-width: 600px) {
+  .col.col-side {
+    width: var(--w-sidebar-collapsed);
+  }
+
+  .sidebar .playlists {
+    opacity: 0;
+  }
 }
