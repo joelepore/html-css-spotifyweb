@@ -13,6 +13,8 @@
   --h-user: 90px;
   --w-sidebar-extended: 200px;
   --w-sidebar-collapsed: 45px;
+  /* GAPS */
+  --gap-cards: 1rem;
 }
 
 /* debug */
@@ -32,7 +34,7 @@ body {
   font-weight: 100;
 }
 
-.container {
+.wrapper {
   height: calc(100vh - var(--h-player));
   color: var(--color-text-primary);
 }
@@ -58,6 +60,16 @@ main {
 
 header {
   height: var(--h-header);
+}
+
+main .container .row {
+  gap: var(--gap-cards);
+  flex-wrap: wrap;
+}
+
+main .container .col {
+  --n-col: 6;
+  flex-basis: calc((100% + var(--gap-cards)) / var(--n-col) - var(--gap-cards));
 }
 
 /* PLAYER */
@@ -98,6 +110,20 @@ header {
 .sidebar .playlists {
   height: calc(100% - (var(--h-logo) + var(--h-nav) + var(--h-user)));
   overflow: auto;
+}
+
+@media screen and (max-width: 1100px) {
+  main .container .col {
+    --n-col: 4;
+    flex-basis: calc((100% + var(--gap-cards)) / var(--n-col) - var(--gap-cards));
+  }
+}
+
+@media screen and (max-width: 700px) {
+  main .container .col {
+    --n-col: 2;
+    flex-basis: calc((100% + var(--gap-cards)) / var(--n-col) - var(--gap-cards));
+  }
 }
 
 @media screen and (max-width: 600px) {
