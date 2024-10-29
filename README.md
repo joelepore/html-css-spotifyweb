@@ -12,3 +12,9 @@ In allegato troverete le screenshot per vedere il layout anche nelle versioni re
 I breackpont visti in classe sono: 600 - 700 - 1100 px
 
 Buon lavoro! :muscle:
+
+## Svolgimento
+1. Analizzo gli screenshot con Excalidraw
+2. Creo i macroblocchi strutturali seguendo la mia analisi
+3. Creo le sottostrutture dove serve (e.g. container row col per le card)
+4. Riempio i blocchi con gli elementi finali
