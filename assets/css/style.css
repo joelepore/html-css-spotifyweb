@@ -7,6 +7,10 @@
   --color-text-secondary: #717171;
   /* SIZES */
   --h-player: 90px;
+  --h-header: 90px;
+  --h-logo: 90px;
+  --h-nav: 120px;
+  --h-user: 90px;
   --w-sidebar-extended: 200px;
   --w-sidebar-collapsed: 45px;
 }
@@ -46,11 +50,17 @@ body {
   width: var(--w-sidebar-extended);
 }
 
+/* MAIN */
 main {
   background-color: var(--color-bg-main);
   height: 100%;
 }
 
+header {
+  height: var(--h-header);
+}
+
+/* PLAYER */
 .player {
   background-color: var(--color-bg-player);
   height: var(--h-player);
@@ -67,25 +77,26 @@ main {
   flex-basis: 40%;
 }
 
+/* SIDEBAR */
 .sidebar {
   background-color: var(--color-bg-sidebar);
   height: 100%;
 }
 
 .sidebar .logo {
-  height: 70px;
+  height: var(--h-logo);
 }
 
 .sidebar nav {
-  height: 120px;
+  height: var(--h-nav);
 }
 
 .sidebar .user {
-  height: 90px;
+  height: var(--h-user);
 }
 
 .sidebar .playlists {
-  height: calc(100% - (70px + 120px + 90px));
+  height: calc(100% - (var(--h-logo) + var(--h-nav) + var(--h-user)));
   overflow: auto;
 }
 
