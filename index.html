@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- FONTS -->
   <link rel="stylesheet" href="assets/fonts/stylesheet.css">
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <title>Spotify Web</title>
 </head>
@@ -15,49 +17,60 @@
     <div class="row">
       <div class="col col-side">
         <aside class="sidebar">
-          <div class="logo debug"></div>
-          <nav class="debug"></nav>
-          <div class="playlists debug">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea tempore consequatur placeat illum, beatae ab
-              voluptatum, est iusto eligendi ratione doloribus voluptatem. Iure doloremque dolorum corporis soluta,
-              perspiciatis, eum, perferendis voluptatem repellat sunt ratione veniam eos ab officiis magnam vitae
-              repellendus nobis. Dolore, perspiciatis odit hic, quae laudantium consectetur repellendus nemo
-              necessitatibus obcaecati ducimus officia deserunt minima iusto. Iste corporis quia tenetur sunt. Explicabo
-              maxime atque dolorum? Deleniti, dignissimos perspiciatis reprehenderit odit sunt natus itaque praesentium,
-              officiis vero eligendi cumque illo. Reprehenderit quod iusto quaerat sit impedit et, eum eius alias?
-              Aspernatur, sapiente delectus numquam omnis hic possimus dolor veritatis doloremque natus maiores amet
-              recusandae deserunt voluptatibus ea voluptate vitae aperiam eaque tenetur, nulla, tempora ad atque
-              cupiditate. Quas iure enim accusantium perferendis corporis fugiat quibusdam veritatis, corrupti obcaecati
-              maiores quae odio voluptatum ducimus alias dignissimos commodi molestias quam sed laudantium delectus!
-              Quam, possimus natus! Repellat non sunt adipisci magni fugiat sequi iusto quia nihil, dolorem dignissimos
-              atque consectetur molestias illum, minima alias ipsum ut, cupiditate dicta nulla. Consectetur molestiae
-              non autem unde quia obcaecati aliquam aperiam doloribus praesentium ratione ad nisi, minus perspiciatis
-              aut eius voluptas aspernatur culpa possimus illo perferendis optio! Consequatur similique dolorum optio
-              tenetur exercitationem maiores at quibusdam possimus voluptas recusandae? Nam nihil maxime dolores
-              laboriosam consequatur, ipsa commodi minus, magni sequi nemo eius sunt molestiae delectus vitae aliquid
-              esse. Quis fugit modi laborum provident maiores, id in beatae sapiente, hic minima perferendis nostrum
-              esse dolore! Quae enim nam vitae! Quas expedita soluta sit eveniet maiores, cum error facere ipsum
-              quibusdam sequi doloremque quis nihil! Placeat nemo nesciunt, impedit consectetur odit, minima tenetur
-              vitae natus et reiciendis fuga eos. Ratione corrupti dolorem fuga et voluptatibus qui exercitationem iste
-              officia minima incidunt maxime magnam eos, laudantium mollitia quia aliquid dolores optio deleniti
-              reprehenderit voluptatem accusamus nesciunt veritatis sed? Cupiditate, est! Officiis eveniet cumque
-              perferendis provident tenetur, rerum placeat enim debitis, sed aspernatur eos harum voluptatum ipsa
-              distinctio praesentium sint neque. Provident iure vitae temporibus quas fugiat. Eligendi blanditiis
-              perferendis iusto hic, laborum voluptatum. Incidunt, ea, reiciendis corporis dolore fugiat culpa quisquam
-              est eius veniam quas iusto nihil quam possimus saepe dolorum sequi sunt aliquid molestiae accusamus totam
-              fuga accusantium? Hic, unde porro sed explicabo provident perferendis beatae architecto voluptas tempore
-              sapiente dolorem itaque molestiae eveniet illum perspiciatis, ipsum, quos alias magnam harum asperiores
-              placeat exercitationem? Corporis, minus iusto atque quaerat explicabo voluptatem tenetur nostrum?
-              Eligendi, odit eaque atque unde nam placeat dolorum pariatur qui tenetur laudantium nisi aliquid aperiam
-              repellat possimus in minus est deserunt deleniti? Corrupti veritatis accusamus animi, voluptatibus aperiam
-              deserunt nisi repellat libero facilis earum cum vero dolor, illo at, inventore nostrum dolores maxime
-              consequuntur. Veritatis at exercitationem optio voluptates excepturi distinctio nam iure non rem in
-              doloremque, ipsa, quaerat velit omnis aperiam quod voluptas, voluptatem nobis natus eveniet officiis
-              reprehenderit consequuntur! Facilis quisquam veritatis repellat sapiente dolores unde ab libero eius
-              maxime ex, est quo laudantium suscipit possimus, ea ipsam consectetur, incidunt deserunt. Sunt quidem
-              officiis placeat consequuntur dolores quo quasi explicabo tenetur!</p>
+          <div class="logo d-flex items-center p-1 px-xs-sm">
+            <img class="d-xs-none" src="assets/img/logo.svg" alt="spotify logo">
+            <img class="d-none d-xs-block" src="assets/img/logo-small.svg" alt="spotify logo">
           </div>
-          <div class="user debug"></div>
+          <nav class="px-1 p-xs-0">
+            <ul class="d-flex flex-col gap-sm">
+              <li class="">
+                <span class="icon">
+                  <img src="assets/img/home.svg" alt="">
+                </span><a class="d-xs-none" href="#">Home</a>
+              </li>
+              <li class="">
+                <span class="icon">
+                  <img src="assets/img/search.svg" alt="">
+                </span><a class="d-xs-none" href="#">Cerca</a>
+              </li>
+              <li class="">
+                <span class="icon">
+                  <img src="assets/img/libreria.svg" alt="">
+                </span><a class="d-xs-none" href="#">La tua libreria</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="playlists px-1">
+            <strong>PLAYLIST</strong>
+            <ul>
+              <li class="py-1"><a href="#">Crea Playlist</a></li>
+              <li class="py-sm"><a href="#">Nome Playlist</a></li>
+              <li class="py-sm"><a href="#">Nome Playlist</a></li>
+              <li class="py-sm"><a href="#">Nome Playlist</a></li>
+              <li class="py-sm"><a href="#">Nome Playlist</a></li>
+              <li class="py-sm"><a href="#">Nome Playlist</a></li>
+              <li class="py-sm"><a href="#">Nome Playlist</a></li>
+              <li class="py-sm"><a href="#">Nome Playlist</a></li>
+              <li class="py-sm"><a href="#">Nome Playlist</a></li>
+              <li class="py-sm"><a href="#">Nome Playlist</a></li>
+            </ul>
+          </div>
+          <div class="user p-1 px-xs-sm d-flex flex-col justify-around">
+            <div class="d-flex gap-1">
+              <span class="icon icon-download"><img src="assets/img/download.svg" alt="download icon"></span>
+              <a href="#" class="color-secondary text-sm d-xs-none">
+                Installa app
+              </a>
+            </div>
+            <hr class="mb-sm">
+
+            <div class="d-flex items-center gap-1">
+              <span class="icon icon-user circle">
+                <img src="assets/img/profile.svg" alt="">
+              </span>
+              <strong><a class="color-primary d-xs-none" href="#">John Doe</a> </strong>
+            </div>
+          </div>
         </aside>
       </div>
       <div class="col">
