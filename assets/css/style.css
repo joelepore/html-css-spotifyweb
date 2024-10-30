@@ -35,6 +35,7 @@
 body {
   font-family: 'CircularStd';
   font-weight: 100;
+  --scrollbar-width: calc(100vw - 100%)
 }
 
 img {
@@ -71,6 +72,7 @@ button {
 
 .col.col-side {
   width: var(--w-sidebar-extended);
+  flex-shrink: 0;
 }
 
 .d-flex {
@@ -101,6 +103,10 @@ button {
   justify-content: space-between;
 }
 
+.justify-end {
+  justify-content: end;
+}
+
 .items-center {
   align-items: center;
 }
@@ -115,6 +121,10 @@ button {
 
 .px-1 {
   padding-inline: 1rem;
+}
+
+.px-2 {
+  padding-inline: 2rem;
 }
 
 .py-sm {
@@ -174,6 +184,25 @@ button {
 }
 
 /* COMPONENTS */
+.btn {
+  border: 1px solid var(--color-text-primary);
+  border-radius: 20px;
+  padding: 10px 20px;
+  display: inline-block;
+  font-weight: bold;
+  color: var(--color-text-primary);
+  font-size: 0.9rem;
+}
+
+.btn.btn-big {
+  padding: 15px 30px;
+  border-radius: 25px;
+}
+
+.btn.btn-big:hover {
+  scale: 1.1;
+}
+
 .slider {
   flex-grow: 1;
   flex: 1;
@@ -214,10 +243,18 @@ button {
 main {
   background-color: var(--color-bg-main);
   height: 100%;
+  padding-top: var(--h-header);
+  overflow: auto;
 }
 
 header {
   height: var(--h-header);
+  opacity: .8;
+  background-color: var(--color-bg-sidebar);
+  position: fixed;
+  width: calc(100% - (var(--w-sidebar-extended) + var(--scrollbar-width)));
+  top: 0;
+  right: var(--scrollbar-width);
 }
 
 main .container .row {
@@ -413,6 +450,10 @@ main .container .col {
 
   .px-xs-sm {
     padding-inline: 0.5rem;
+  }
+
+  header {
+    width: calc(100% - (var(--w-sidebar-collapsed) + var(--scrollbar-width)));
   }
 }
 
