@@ -144,6 +144,10 @@ button {
   padding-block: 2rem;
 }
 
+.pb-3 {
+  padding-bottom: 3rem;
+}
+
 .my-sm {
   margin-block: 0.5rem;
 }
@@ -295,6 +299,7 @@ header {
   width: calc(100% - (var(--w-sidebar-extended) + var(--scrollbar-width)));
   top: 0;
   right: var(--scrollbar-width);
+  z-index: 100;
 }
 
 main .container .row {
