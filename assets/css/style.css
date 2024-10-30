@@ -491,6 +491,13 @@ main .categories ul li:hover a {
   }
 }
 
+@media screen and (max-width: 780px) {
+  main .container .col {
+    --n-col: 4;
+    flex-basis: calc((100% + var(--gap-cards)) / var(--n-col) - var(--gap-cards) - 0.5rem);
+  }
+}
+
 @media screen and (max-width: 700px) {
   main .container .col {
     --n-col: 2;
