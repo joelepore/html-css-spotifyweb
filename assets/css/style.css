@@ -320,7 +320,6 @@ button {
 main {
   background-color: var(--color-bg-main);
   height: 100%;
-  padding-top: var(--h-header);
   overflow: auto;
 }
 
@@ -328,8 +327,8 @@ header {
   height: var(--h-header);
   opacity: .8;
   background-color: var(--color-bg-sidebar);
-  position: fixed;
-  width: calc(100% - (var(--w-sidebar-extended) + var(--scrollbar-width)));
+  position: sticky;
+  width: 100%;
   top: 0;
   right: var(--scrollbar-width);
   z-index: 100;
