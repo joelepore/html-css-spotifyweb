@@ -544,10 +544,6 @@ main .categories ul li:hover a {
   .px-xs-sm {
     padding-inline: 0.5rem;
   }
-
-  header {
-    width: calc(100% - (var(--w-sidebar-collapsed) + var(--scrollbar-width)));
-  }
 }
 
 @media screen and (max-height: 390px) {
