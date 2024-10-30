@@ -6,6 +6,7 @@
   --color-bg-user: #808080;
   --color-text-primary: #fff;
   --color-text-secondary: #717171;
+  --color-spotify: #adff2f;
   /* SIZES */
   --h-player: 90px;
   --h-header: 90px;
@@ -47,6 +48,10 @@ a {
 
 hr {
   border-color: var(--color-text-secondary);
+}
+
+button {
+  cursor: pointer;
 }
 
 /* UTILS */
@@ -104,6 +109,10 @@ hr {
   padding: 1rem;
 }
 
+.px-sm {
+  padding-inline: 0.5rem;
+}
+
 .px-1 {
   padding-inline: 1rem;
 }
@@ -132,8 +141,24 @@ hr {
   gap: 1rem;
 }
 
+.gap-2 {
+  gap: 2rem;
+}
+
 .text-sm {
   font-size: 0.9rem;
+}
+
+.text-md {
+  font-size: 1.2rem;
+}
+
+.text-lg {
+  font-size: 2rem;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .color-primary {
@@ -146,6 +171,43 @@ hr {
 
 .circle {
   border-radius: 50%;
+}
+
+/* COMPONENTS */
+.slider {
+  flex-grow: 1;
+  flex: 1;
+  height: 5px;
+  background-color: var(--color-text-secondary);
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+.slider-inner {
+  height: 100%;
+  width: 20%;
+  position: absolute;
+  background-color: var(--color-text-primary);
+  border-radius: 10px;
+}
+
+.slider-inner .circle {
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  position: absolute;
+  right: -4.5px;
+  top: -4.5px;
+  display: none;
+}
+
+.slider:hover .slider-inner {
+  background-color: var(--color-spotify);
+}
+
+.slider:hover .slider-inner .circle {
+  display: block;
 }
 
 /* MAIN */
@@ -181,9 +243,32 @@ main .container .col {
   flex-basis: 240px;
 }
 
+.player-info>img {
+  max-width: 45px;
+  max-height: 45px;
+}
+
+.player-info button:hover {
+  color: var(--color-text-primary);
+}
+
 .player-main {
   flex-basis: 40%;
 }
+
+.player button {
+  background: none;
+  border: none;
+}
+
+.player-main-top {
+  height: 60%;
+}
+
+.player-main-bottom {
+  height: 40%;
+}
+
 
 /* SIDEBAR */
 .sidebar {
@@ -318,6 +403,17 @@ main .container .col {
     align-items: center;
   }
 
+  .text-xs-sm {
+    font-size: .9rem;
+  }
+
+  .text-xs-md {
+    font-size: 1.2rem;
+  }
+
+  .px-xs-sm {
+    padding-inline: 0.5rem;
+  }
 }
 
 @media screen and (max-height: 390px) {
