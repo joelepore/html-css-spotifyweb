@@ -13,6 +13,7 @@
   --h-header: 90px;
   --h-logo: 90px;
   --h-nav: 120px;
+  --h-crea-playlist: 72px;
   --h-user: 90px;
   --w-sidebar-extended: 230px;
   --w-sidebar-collapsed: 45px;
@@ -431,7 +432,7 @@ main .categories ul li:hover a {
   gap: 0.5rem;
 }
 
-.sidebar ul li:hover a {
+.sidebar a:hover {
   color: var(--color-text-primary);
 }
 
@@ -441,18 +442,28 @@ main .categories ul li:hover a {
 
 .sidebar .user {
   height: var(--h-user);
+  background-color: var(--color-bg-sidebar);
 }
 
 .sidebar .playlists {
   height: calc(100% - (var(--h-logo) + var(--h-nav) + var(--h-user)));
+}
+
+.sidebar .playlists .playlists-top {
+  height: var(--h-crea-playlist);
+}
+
+.sidebar .playlists .playlists-bottom {
+  height: calc(100% - var(--h-crea-playlist));
   overflow: auto;
 }
 
-.sidebar .playlists ul li:first-child {
+.sidebar .playlists .crea-playlist {
   font-size: 1.1rem;
+  display: block;
 }
 
-.sidebar .playlists ul li:first-child::before {
+.sidebar .playlists .crea-playlist::before {
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
   content: '\2b';
@@ -463,6 +474,7 @@ main .categories ul li:hover a {
   height: 20px;
   text-align: center;
   line-height: 20px;
+  margin-right: 1rem;
 }
 
 .sidebar .playlists ul li:first-child:hover::before {
